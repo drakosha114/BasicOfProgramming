@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab8-squares", "lab8-squares\lab8-squares.csproj", "{0AC0B2A8-0F92-4626-9D18-F83A8D11B3D4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE5F35DF-68E7-465E-BABC-E968138F7538} = {FE5F35DF-68E7-465E-BABC-E968138F7538}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiguresLibrary", "FiguresLibrary\FiguresLibrary.csproj", "{FE5F35DF-68E7-465E-BABC-E968138F7538}"
 EndProject

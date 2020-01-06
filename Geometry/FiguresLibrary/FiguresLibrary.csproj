@@ -121,7 +121,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Figure\Square.cs" />
+    <Compile Include="Figure\Triangle.cs" />
+    <Compile Include="Point\IPoint.cs" />
+    <Compile Include="Point\Point.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\CalculateNewPoint.cs" />
     <EmbeddedResource Include="Properties\FiguresLibrary.rd.xml" />
   </ItemGroup>
   <ItemGroup>
