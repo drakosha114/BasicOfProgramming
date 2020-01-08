@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="lab9_triangles.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:lab9_triangles"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel>
+        <StackPanel Padding="10">
+            <TextBlock Text="Лабораторная работа №9" Style="{StaticResource TitleTextBlockStyle}"/>
+            <TextBlock Text="Треугольник Септинского" Style="{StaticResource SubtitleTextBlockStyle}"></TextBlock>
+        </StackPanel>
+        <StackPanel Padding="10" Background="Gray">
+            <Grid VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="230"></ColumnDefinition>
+                    <ColumnDefinition Width="230"></ColumnDefinition>
+                    <ColumnDefinition Width="230"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <ComboBox
+                    Grid.Column="0"
+                    Header="Цвет рамки"
+                    Width="200"
+                    PlaceholderText="Выберете цвет рамки"
+                    IsEditable="True"
+                    ItemsSource="{x:Bind ListOfBorderColors}"
+                    SelectedItem="{x:Bind CurrentBorderColor, Mode=TwoWay}"
+                />
+                <ComboBox
+                    Grid.Column="1"
+                    Header="Цвет заливки"
+                    Width="200"
+                    PlaceholderText="Выберете цвет заливки"
+                    IsEditable="True"
+                    ItemsSource="{x:Bind ListOfBgColors}"
+                    SelectedItem="{x:Bind CurrentBgColor, Mode=TwoWay}"
+                />
+                <ComboBox
+                    Grid.Column="2"
+                    Header="Глубина"
+                    Width="200"
+                    PlaceholderText="Выберете глубину вложения"
+                    IsEditable="True"
+                    ItemsSource="{x:Bind ListOfScales}"
+                    SelectedItem="{x:Bind CurrentScale, Mode=TwoWay}"
+                />
+                <Button Grid.Column="3" Content="Рисовать" Click="Paint_Button_Click"></Button>
+            </Grid>
+        </StackPanel>
+        <ScrollViewer HorizontalScrollMode="Auto" VerticalScrollMode="Auto">
+            <StackPanel Padding="10 40">
+                <Canvas x:Name="CanvasWrapper" Background="Gray" Height="600" Width="600"/>
+            </StackPanel>
+        </ScrollViewer>
+    </StackPanel>
+</Page>
