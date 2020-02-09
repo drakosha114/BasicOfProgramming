@@ -14,21 +14,10 @@ namespace Lab4Array_part2
             Console.WriteLine("Введите число строк (не больше 100)");
 
             int num_of_rows = Convert.ToInt32(Console.ReadLine());
-            /*
-            do {
-                num_of_rows = Convert.ToInt32(Console.ReadLine());
 
-            } while (num_of_rows > 0 && num_of_rows <= 100);
-            */
             Console.WriteLine("Введите число столбцов (не больше 100)");
 
             int num_of_colls = Convert.ToInt32(Console.ReadLine());
-            /*
-            do {
-                num_of_colls = Convert.ToInt32(Console.ReadLine());
-
-            } while (num_of_colls > 0 && num_of_colls <= 100);
-            */
 
             int[,] arr = new int[num_of_rows, num_of_colls];
 
